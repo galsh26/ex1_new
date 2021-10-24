@@ -1,9 +1,12 @@
-// Amit Zakai 318654167
-#include <iostream>
-#include <cmath>
+/*
+ * anomaly_detection_util.cpp
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
-// amit add here your id :)
-// Gal Schlifstein, id: 209492925
+#include <cmath>
+#include "anomaly_detection_util.h"
 
 // returns the mean of X
 float mean(const float* x, int size) {
@@ -19,7 +22,7 @@ float var(float* x, int size) {
     float x_mean, var = 0;
     x_mean = mean(x, size);
     for (int i = 0; i < size; ++i) {
-        var += pow(x[i] - x_mean, 2);
+        var += powf(x[i] - x_mean, 2);
     }
     return var / size;
 }
@@ -41,33 +44,18 @@ float pearson(float* x, float* y, int size) {
     x_var = var(x, size);
     y_var = var(y, size);
     xy_cov = cov(x, y, size);
-    return xy_cov / (sqrt(x_var) * sqrt(y_var));
+    return xy_cov / (sqrtf(x_var) * sqrtf(y_var));
 }
 
-class Line{
-public:
-    float a,b;
-    Line():a(0),b(0){}
-    Line(float a, float b):a(a),b(b){}
-    float f(float x){
-        return a*x+b;
-    }
-};
-class Point{
-public:
-    float x,y;
-    Point(float x, float y):x(x),y(y){}
-    float getX() { return x;}
-    float getY() { return y;}
-};
+
 
 // performs a linear regression and return s the line equation
 Line linear_reg(Point** points, int size) {
     float x[size];
     float y[size];
     for (int i = 0; i < size; i++) {
-        x[i] = points[i]->getX();
-        y[i] = points[i]->getY();
+        x[i] = points[i]->x;
+        y[i] = points[i]->y;
     }
     float covxy = cov(x, y, size);
     float a = covxy / var(x, size);
