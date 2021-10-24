@@ -1,3 +1,4 @@
+// Amit Zakai 318654167
 #include <iostream>
 #include <cmath>
 
@@ -15,7 +16,7 @@ float mean(const float* x, int size) {
 
 // returns the variance of X
 float var(float* x, int size) {
-    float x_mean, var;
+    float x_mean, var = 0;
     x_mean = mean(x, size);
     for (int i = 0; i < size; ++i) {
         var += pow(x[i] - x_mean, 2);
@@ -25,7 +26,7 @@ float var(float* x, int size) {
 
 // returns the covariance of X and Y
 float cov(float* x, float* y, int size) {
-    float x_mean, y_mean, var;
+    float x_mean, y_mean, var = 0;
     x_mean = mean(x, size);
     y_mean = mean(y, size);
     for (int i = 0; i < size; ++i) {
@@ -94,35 +95,6 @@ float dev(Point p,Line l) {
 //---------------------------------------------------
 
 using namespace std;
-
-bool wrong(float val, float expected) {
-    return val < expected - 0.001 || val > expected + 0.001;
-}
 int main() {
-    const int N=10;
-    float x[]={1,2,3,4,5,6,7,8,9,10};
-    float y[]={2.1,4.2,6.1,8.1,10.3,12.2,14.4,16.1,18.2,20.3};
-
-    Point* ps[N];
-    for(int i=0;i<N;i++)
-        ps[i]=new Point(x[i],y[i]);
-
-    Line l=linear_reg(ps,N);
-    Point p(4,8);
-
-    float v[]={var(x,N),cov(x,y,N),pearson(x,y,N),l.a,l.b,l.f(4),dev(p,l)};
-    float e[]={8.25,16.63,0.999,2.015,0.113,8.176,0.176};
-
-
-    for(int i=0;i<7;i++)
-        if(wrong(v[i],e[i]))
-            cout<<"error for check "<<i<<" (-14)"<<endl;
-
-
-    for(int i=0;i<N;i++)
-        delete ps[i];
-
-    cout<<"done"<<endl;
     return 0;
 }
-//check note
