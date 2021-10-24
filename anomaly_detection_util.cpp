@@ -22,9 +22,10 @@ float var(float* x, int size) {
     float x_mean, var = 0;
     x_mean = mean(x, size);
     for (int i = 0; i < size; ++i) {
-        var += powf(x[i] - x_mean, 2);
+        var += powf(x[i], 2);
     }
-    return var / size;
+    var = var / size;
+    return (var - powf(x_mean, 2));
 }
 
 // returns the covariance of X and Y
