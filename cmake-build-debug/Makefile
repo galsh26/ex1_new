@@ -140,6 +140,33 @@ ex1/fast:
 	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/build
 .PHONY : ex1/fast
 
+anomaly_detection_util.o: anomaly_detection_util.cpp.o
+
+.PHONY : anomaly_detection_util.o
+
+# target to build an object file
+anomaly_detection_util.cpp.o:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o
+.PHONY : anomaly_detection_util.cpp.o
+
+anomaly_detection_util.i: anomaly_detection_util.cpp.i
+
+.PHONY : anomaly_detection_util.i
+
+# target to preprocess a source file
+anomaly_detection_util.cpp.i:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/anomaly_detection_util.cpp.i
+.PHONY : anomaly_detection_util.cpp.i
+
+anomaly_detection_util.s: anomaly_detection_util.cpp.s
+
+.PHONY : anomaly_detection_util.s
+
+# target to generate assembly for a file
+anomaly_detection_util.cpp.s:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/anomaly_detection_util.cpp.s
+.PHONY : anomaly_detection_util.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -176,6 +203,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex1"
+	@echo "... anomaly_detection_util.o"
+	@echo "... anomaly_detection_util.i"
+	@echo "... anomaly_detection_util.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
