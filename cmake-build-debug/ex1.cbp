@@ -88,9 +88,6 @@
 		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/anomaly_detection_util.h">
 			<Option target="ex1"/>
 		</Unit>
-		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/main.cpp">
-			<Option target="ex1"/>
-		</Unit>
 		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
