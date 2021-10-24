@@ -78,11 +78,5 @@ float dev(Point p,Line l) {
     return std::abs(expected - p.y);
 }
 
-//---------------------------------------------------
-// checks from the moodle
-//---------------------------------------------------
-
 using namespace std;
-int main() {
-    return 0;
-}
+
