@@ -13,10 +13,16 @@
 using namespace std;
 
 class timeseries {
-private:
-    map<const string, vector<float>>;
+    private:
+        map<string,vector<float>> mapTimeSeries;
+        vector<string> columns;
+        int rowSize;
 
-public:
-    timeseries(string file_name);
-    feature_by_time(string typeName, float time);
+    public:
+        timeseries(const char* file_name) {
+            // we need to write here the method implementation
+        }
+        feature_by_time(string typeName, float time) {
+            // we need to write here the method implementation
+        }
 };
