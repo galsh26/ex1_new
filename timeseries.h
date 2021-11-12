@@ -10,19 +10,16 @@
 #include <map>
 #include <vector>
 
-using namespace std;
+//using namespace std;
 
 class timeseries {
     private:
-        map<string,vector<float>> mapTimeSeries;
-        vector<string> columns;
+        std::map<const std:: string ,std::vector<float>> mapTimeSeries;
+        std::vector<float> values;
+        std::vector<std::string> colNames;
         int rowSize;
 
     public:
-        timeseries(const char* file_name) {
-            // we need to write here the method implementation
-        }
-        feature_by_time(string typeName, float time) {
-            // we need to write here the method implementation
-        }
+        timeseries(const char* file_name);
+        float feature_by_time(std::string typeName, float time);
 };
