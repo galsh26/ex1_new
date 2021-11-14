@@ -6,7 +6,7 @@ float var(float* x, int size);
 float cov(float* x, float* y, int size);
 // returns the Pearson correlation coefficient of X and Y
 float pearson(float* x, float* y, int size);
-class Line{
+class Line {
 public:
     float a,b;
     Line():a(0),b(0){}
