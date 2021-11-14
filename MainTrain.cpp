@@ -74,6 +74,7 @@ int main(){
 
     generateTrainCSV(a1,b1,a2,b2);
     TimeSeries ts("trainFile1.csv");
+    //TimeSeries ts("example.txt");
     /*
     SimpleAnomalyDetector ad;
     ad.learnNormal(ts);

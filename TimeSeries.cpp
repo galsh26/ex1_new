@@ -25,6 +25,7 @@ TimeSeries::TimeSeries(const char *file_name) {
         stringstream strs(line);
         while (getline(strs, column, ',')) {
             this->tableVectors.push_back({column, vector<float>{}});
+            this->colNames.push_back(column);
         }
     }
     while (getline(myFile, line)) {

@@ -19,7 +19,6 @@
 class TimeSeries {
     private:
         std::vector<std::pair<std::string, std::vector<float>>> tableVectors;
-        std::vector<float> values;
         std::vector<std::string> colNames;
         int rowSize;
 
