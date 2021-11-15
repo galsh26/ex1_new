@@ -54,8 +54,8 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
             // casting vectors to pointers array
             vector<float> temp1 = ts.getValuesByIndex(i);
             vector<float> temp2 = ts.getValuesByIndex(j);
-            float* fea1 = temp1.data();
-            float* fea2 = temp2.data();
+            float* fea1 = &temp1[0];
+            float* fea2 = &temp2[0];
             // calculate corrlation
             p = abs(pearson(fea1, fea2, val_num));
             // if correlated switch
@@ -87,8 +87,8 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const timeseries &ts) {
         int size = ts.getNumberOfValues();
         vector<float> temp1 = ts.getValuesByName(temp.feature1);
         vector<float> temp2 = ts.getValuesByName(temp.feature2);
-        float* arr1 = temp1.data();
-        float* arr2 = temp2.data();
+        float* arr1 = &temp1[0];
+        float* arr2 = &temp2[0];
         //temp.corrlation = abs(pearson(arr1, arr2, size));
         Point **pointsArray = getPointsArray(arr1, arr2, size);
         temp.lin_reg = linear_reg(pointsArray, size);
