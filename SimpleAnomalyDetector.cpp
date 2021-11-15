@@ -7,4 +7,7 @@
  * Author: Amit Zakai, id: 318654167
  */
 
+void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
+
+}
 

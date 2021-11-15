@@ -25,9 +25,10 @@ TimeSeries::TimeSeries(const char *file_name) {
         stringstream strs(line);
         while (getline(strs, column, ',')) {
             this->tableVectors.push_back({column, vector<float>{}});
-            this->colNames.push_back(column);
+            this->featureNames.push_back(column);
         }
     }
+    this->rowSize = featureNames.size();
     while (getline(myFile, line)) {
         stringstream strs(line);
         int index = 0;
@@ -39,7 +40,9 @@ TimeSeries::TimeSeries(const char *file_name) {
             index++;
         }
     }
+
     myFile.close();
 }
+
 
 
