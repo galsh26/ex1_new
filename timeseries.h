@@ -16,7 +16,7 @@
 #include <fstream>
 #include <sstream>
 
-class TimeSeries {
+class timeseries {
     private:
         std::vector<std::pair<std::string, std::vector<float>>> tableVectors;
         std::vector<std::string> featureNames;
@@ -24,7 +24,7 @@ class TimeSeries {
         int colSize;
 
     public:
-        TimeSeries(const char* file_name);
+        timeseries(const char* file_name);
 
         float get_feature_by_time(std::string typeName, float time) const;
 

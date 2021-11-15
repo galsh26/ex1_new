@@ -5,7 +5,7 @@
  * Author: Amit Zakai, id: 318654167
  */
 
-#include "TimeSeries.h"
+#include "timeseries.h"
 #include <iostream>
 #include <iterator>
 #include <map>
@@ -15,7 +15,7 @@
 
 using namespace std;
 
-TimeSeries::TimeSeries(const char *file_name) {
+timeseries::timeseries(const char *file_name) {
     ifstream myFile(file_name);
     if(!myFile.is_open()) throw std::runtime_error("Error opening file");
     string line, column;

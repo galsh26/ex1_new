@@ -79,18 +79,18 @@ CMakeFiles/ex1.dir/anomaly_detection_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex1.dir/anomaly_detection_util.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amitzakai/CLionProjects/advanced/ex1_new/anomaly_detection_util.cpp -o CMakeFiles/ex1.dir/anomaly_detection_util.cpp.s
 
-CMakeFiles/ex1.dir/TimeSeries.cpp.o: CMakeFiles/ex1.dir/flags.make
-CMakeFiles/ex1.dir/TimeSeries.cpp.o: ../TimeSeries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex1.dir/TimeSeries.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex1.dir/TimeSeries.cpp.o -c /home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.cpp
+CMakeFiles/ex1.dir/timeseries.cpp.o: CMakeFiles/ex1.dir/flags.make
+CMakeFiles/ex1.dir/timeseries.cpp.o: ../timeseries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex1.dir/timeseries.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex1.dir/timeseries.cpp.o -c /home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.cpp
 
-CMakeFiles/ex1.dir/TimeSeries.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex1.dir/TimeSeries.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.cpp > CMakeFiles/ex1.dir/TimeSeries.cpp.i
+CMakeFiles/ex1.dir/timeseries.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex1.dir/timeseries.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.cpp > CMakeFiles/ex1.dir/timeseries.cpp.i
 
-CMakeFiles/ex1.dir/TimeSeries.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex1.dir/TimeSeries.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.cpp -o CMakeFiles/ex1.dir/TimeSeries.cpp.s
+CMakeFiles/ex1.dir/timeseries.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex1.dir/timeseries.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.cpp -o CMakeFiles/ex1.dir/timeseries.cpp.s
 
 CMakeFiles/ex1.dir/MainTrain.cpp.o: CMakeFiles/ex1.dir/flags.make
 CMakeFiles/ex1.dir/MainTrain.cpp.o: ../MainTrain.cpp
@@ -121,7 +121,7 @@ CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.s: cmake_force
 # Object files for target ex1
 ex1_OBJECTS = \
 "CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o" \
-"CMakeFiles/ex1.dir/TimeSeries.cpp.o" \
+"CMakeFiles/ex1.dir/timeseries.cpp.o" \
 "CMakeFiles/ex1.dir/MainTrain.cpp.o" \
 "CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.o"
 
@@ -129,7 +129,7 @@ ex1_OBJECTS = \
 ex1_EXTERNAL_OBJECTS =
 
 ex1: CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o
-ex1: CMakeFiles/ex1.dir/TimeSeries.cpp.o
+ex1: CMakeFiles/ex1.dir/timeseries.cpp.o
 ex1: CMakeFiles/ex1.dir/MainTrain.cpp.o
 ex1: CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.o
 ex1: CMakeFiles/ex1.dir/build.make

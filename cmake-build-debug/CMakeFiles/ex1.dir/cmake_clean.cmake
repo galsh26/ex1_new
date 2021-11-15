@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ex1.dir/MainTrain.cpp.o"
   "CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.o"
-  "CMakeFiles/ex1.dir/TimeSeries.cpp.o"
   "CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o"
+  "CMakeFiles/ex1.dir/timeseries.cpp.o"
   "ex1"
   "ex1.pdb"
 )

@@ -5,17 +5,17 @@ CMakeFiles/ex1.dir/MainTrain.cpp.o: \
  ../AnomalyDetector.h \
  ../MainTrain.cpp \
  ../SimpleAnomalyDetector.h \
- ../TimeSeries.h \
- ../anomaly_detection_util.h
+ ../anomaly_detection_util.h \
+ ../timeseries.h
 CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.o: \
  ../AnomalyDetector.h \
  ../SimpleAnomalyDetector.cpp \
  ../SimpleAnomalyDetector.h \
- ../TimeSeries.h \
- ../anomaly_detection_util.h
-CMakeFiles/ex1.dir/TimeSeries.cpp.o: \
- ../TimeSeries.cpp \
- ../TimeSeries.h
+ ../anomaly_detection_util.h \
+ ../timeseries.h
 CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o: \
  ../anomaly_detection_util.cpp \
  ../anomaly_detection_util.h
+CMakeFiles/ex1.dir/timeseries.cpp.o: \
+ ../timeseries.cpp \
+ ../timeseries.h

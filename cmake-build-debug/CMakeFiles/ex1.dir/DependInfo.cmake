@@ -10,8 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/amitzakai/CLionProjects/advanced/ex1_new/MainTrain.cpp" "/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles/ex1.dir/MainTrain.cpp.o"
   "/home/amitzakai/CLionProjects/advanced/ex1_new/SimpleAnomalyDetector.cpp" "/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles/ex1.dir/SimpleAnomalyDetector.cpp.o"
-  "/home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.cpp" "/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles/ex1.dir/TimeSeries.cpp.o"
   "/home/amitzakai/CLionProjects/advanced/ex1_new/anomaly_detection_util.cpp" "/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles/ex1.dir/anomaly_detection_util.cpp.o"
+  "/home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.cpp" "/home/amitzakai/CLionProjects/advanced/ex1_new/cmake-build-debug/CMakeFiles/ex1.dir/timeseries.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,5 +1,5 @@
 #include "SimpleAnomalyDetector.h"
-#include "anomaly_detection_util.h"
+//#include "anomaly_detection_util.h"
 
 /*
  * SimpleAnomalyDetector.cpp
@@ -37,7 +37,7 @@ pair<float, int> getThreshold(Point** points, Line line, int size) {
     return pr;
 }
 
-void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
+void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
     // temp structure for correlated features
     correlatedFeatures cf;
     int fea_num = ts.getNumberOfFeatures();
@@ -70,7 +70,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     }
 }
 
-vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
+vector<AnomalyReport> SimpleAnomalyDetector::detect(const timeseries &ts) {
     vector<AnomalyReport> anomaly_reports;
     correlatedFeatures temp;
     for(correlatedFeatures i : this->correlations) {

@@ -48,7 +48,7 @@ void checkCorrelationTrain(correlatedFeatures c,string f1, string f2, float a, f
         if(c.feature2!=f2)
             cout<<"wrong correlated feature of "<<f1<<" (-20)"<<endl;
         else{
-            if(c.corrlation<0.99)
+            if(c.correlation<0.99)
                 cout<<f1<<"-"<<f2<<" wrong correlation detected (-5)"<<endl;
             if(c.lin_reg.a<a-0.5f || c.lin_reg.a>a+0.5f)
                 cout<<f1<<"-"<<f2<<" wrong value of line_reg.a (-5)"<<endl;
@@ -73,8 +73,8 @@ int main(){
     //	B-D: y=a2*x+b2
 
     generateTrainCSV(a1,b1,a2,b2);
-    TimeSeries ts("trainFile1.csv");
-    //TimeSeries ts("example.txt");
+    timeseries ts("trainFile1.csv");
+    //timeseries ts("example.txt");
     /*
     SimpleAnomalyDetector ad;
     ad.learnNormal(ts);
@@ -92,7 +92,7 @@ int main(){
     // one simply anomaly is injected to the data
     int anomaly=5+rand()%90; // one anomaly injected in a random time step
     generateTestCSV(a1,b1,a2,b2,anomaly);
-    TimeSeries ts2("testFile1.csv");
+    timeseries ts2("testFile1.csv");
     vector<AnomalyReport> r = ad.detect(ts2);
 
     bool anomlyDetected=false;

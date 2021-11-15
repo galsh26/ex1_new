@@ -94,16 +94,16 @@
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/SimpleAnomalyDetector.h">
 			<Option target="ex1"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.cpp">
-			<Option target="ex1"/>
-		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/TimeSeries.h">
-			<Option target="ex1"/>
-		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/anomaly_detection_util.cpp">
 			<Option target="ex1"/>
 		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/anomaly_detection_util.h">
+			<Option target="ex1"/>
+		</Unit>
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.cpp">
+			<Option target="ex1"/>
+		</Unit>
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/timeseries.h">
 			<Option target="ex1"/>
 		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex1_new/CMakeLists.txt">

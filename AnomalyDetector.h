@@ -5,9 +5,9 @@
  * Author: Amit Zakai, id: 318654167
  */
 
-#include "TimeSeries.h"
+#include "timeseries.h"
 
-class TimeSeries;
+class timeseries;
 class AnomalyReport{
 public:
     const std::string description;
@@ -17,7 +17,7 @@ public:
 };
 class TimeSeriesAnomalyDetector {
 public:
-    virtual void learnNormal(const TimeSeries& ts)=0;
-    virtual std::vector<AnomalyReport> detect(const TimeSeries& ts)=0;
+    virtual void learnNormal(const timeseries& ts)=0;
+    virtual std::vector<AnomalyReport> detect(const timeseries& ts)=0;
     virtual ~TimeSeriesAnomalyDetector(){}
 };
