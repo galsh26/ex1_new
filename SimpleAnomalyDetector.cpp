@@ -10,7 +10,13 @@
 
 using namespace std;
 
-Point** getPointsArray(float* a, float* b, int size) {
+SimpleAnomalyDetector::SimpleAnomalyDetector() {}
+
+SimpleAnomalyDetector::~SimpleAnomalyDetector() noexcept {}
+
+std::vector<correlatedFeatures> SimpleAnomalyDetector::getNormalModel() {}
+
+Point** getPointsArray(const float* a,const float* b, int size) {
     Point **p;
     for (int i = 0; i < size; ++i) {
         p[i]->x = a[i];
@@ -46,9 +52,11 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
         int m = 0, c = -1, p;
         for (int j = i + 1; i < fea_num; j++) {
             // casting vectors to pointers array
-            float* fea1 = &ts.getValuesByIndex(i).at(0);
-            float* fea2 = &ts.getValuesByIndex(j).at(0);
-            // calculate correlation
+            vector<float> temp1 = ts.getValuesByIndex(i);
+            vector<float> temp2 = ts.getValuesByIndex(j);
+            float* fea1 = temp1.data();
+            float* fea2 = temp2.data();
+            // calculate corrlation
             p = abs(pearson(fea1, fea2, val_num));
             // if correlated switch
             if (p > m) {
@@ -59,11 +67,11 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
             if (c != -1) {
                 cf.feature1 = ts.getFeatureName(i);
                 cf.feature2 = ts.getFeatureName(j);
-                cf.correlation = p;
+                cf.corrlation = p;
                 Point **pointsArray = getPointsArray(fea1, fea2, val_num);
                 cf.lin_reg = linear_reg(pointsArray, val_num);
                 cf.threshold = getThreshold(pointsArray, cf.lin_reg, val_num).first * 1.1;
-                // save in correlation
+                // save in corrlation
                 this->correlations.push_back(cf);
             }
         }
@@ -77,9 +85,11 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const timeseries &ts) {
         temp.feature1 = i.feature1;
         temp.feature2 = i.feature2;
         int size = ts.getNumberOfValues();
-        float* arr1 = &ts.getValuesByName(temp.feature1).at(0);
-        float* arr2 = &ts.getValuesByName(temp.feature2).at(0);
-        //temp.correlation = abs(pearson(arr1, arr2, size));
+        vector<float> temp1 = ts.getValuesByName(temp.feature1);
+        vector<float> temp2 = ts.getValuesByName(temp.feature2);
+        float* arr1 = temp1.data();
+        float* arr2 = temp2.data();
+        //temp.corrlation = abs(pearson(arr1, arr2, size));
         Point **pointsArray = getPointsArray(arr1, arr2, size);
         temp.lin_reg = linear_reg(pointsArray, size);
         pair<float, int> pr = getThreshold(pointsArray, temp.lin_reg, size);

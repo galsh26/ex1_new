@@ -4,7 +4,7 @@ float mean(const float* x, int size);
 float var(float* x, int size);
 // returns the covariance of X and Y
 float cov(float* x, float* y, int size);
-// returns the Pearson correlation coefficient of X and Y
+// returns the Pearson corrlation coefficient of X and Y
 float pearson(float* x, float* y, int size);
 class Line {
 public:

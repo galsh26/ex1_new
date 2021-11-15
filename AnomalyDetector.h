@@ -7,7 +7,8 @@
 
 #include "timeseries.h"
 
-class timeseries;
+//class TimeSeries{ /*...*/};
+
 class AnomalyReport{
 public:
     const std::string description;
