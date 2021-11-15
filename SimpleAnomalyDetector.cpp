@@ -90,5 +90,6 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
             anomaly_reports.push_back(AnomalyReport(des, row_ano));
         }
     }
+    return anomaly_reports;
 }
 
