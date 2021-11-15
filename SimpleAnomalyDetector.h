@@ -18,6 +18,8 @@ struct correlatedFeatures{
     float threshold;
 };
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
+private:
+    std::vector<correlatedFeatures> correlations;
 public:
     SimpleAnomalyDetector();
     virtual ~SimpleAnomalyDetector();
