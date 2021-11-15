@@ -19,16 +19,22 @@ Point** getPointsArray(float* a, float* b, int size) {
     return p;
 }
 // calculate threshold for line of features
-float getThreshold(Point** points, Line line, int size) {
+pair<float, int> getThreshold(Point** points, Line line, int size) {
+    pair<float, int> pr;
     float max_thr = 0, temp;
+    int row, counter = 1;
     for (int i = 0; i < size; i++) {
         Point p = (Point) *points[i];
         temp = dev(p, line);
         if (temp > max_thr) {
             max_thr = temp;
+            row = counter;
         }
+        counter++;
     }
-    return max_thr;
+    pr.first = max_thr;
+    pr.second = row;
+    return pr;
 }
 
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
@@ -56,7 +62,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 cf.correlation = p;
                 Point **pointsArray = getPointsArray(fea1, fea2, val_num);
                 cf.lin_reg = linear_reg(pointsArray, val_num);
-                cf.threshold = getThreshold(pointsArray, cf.lin_reg, val_num) * 1.1;
+                cf.threshold = getThreshold(pointsArray, cf.lin_reg, val_num).first * 1.1;
                 // save in correlation
                 this->correlations.push_back(cf);
             }
@@ -76,10 +82,12 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
         //temp.correlation = abs(pearson(arr1, arr2, size));
         Point **pointsArray = getPointsArray(arr1, arr2, size);
         temp.lin_reg = linear_reg(pointsArray, size);
-        temp.threshold = getThreshold(pointsArray, temp.lin_reg, size);
+        pair<float, int> pr = getThreshold(pointsArray, temp.lin_reg, size);
+        temp.threshold = pr.first;
         if (temp.threshold > i.threshold) {
             string des = temp.feature1 + '-' + temp.feature2;
-            
+            int row_ano = pr.second;
+            anomaly_reports.push_back(AnomalyReport(des, row_ano));
         }
     }
 }
