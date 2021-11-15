@@ -21,19 +21,37 @@ class TimeSeries {
         std::vector<std::pair<std::string, std::vector<float>>> tableVectors;
         std::vector<std::string> featureNames;
         int rowSize;
+        int colSize;
 
     public:
         TimeSeries(const char* file_name);
-        float feature_by_time(std::string typeName, float time);
-        std::vector<float> getValuesVector(std::string feature){
+
+        float get_feature_by_time(std::string typeName, float time) const;
+
+        std::vector<float> getValuesByName(std::string feature) const{
             for (int i = 0; i < this->rowSize; i++) {
                 if (this->featureNames.at(i).compare(feature)) {
                     return this->tableVectors.at(i).second;
                 }
             }
         }
-        std::vector<std::string> getFeatureNames() {
+
+        std::vector<float> getValuesByIndex(int n) const{
+            return this->tableVectors.at(n).second;
+        }
+
+        std::vector<std::string> getFeatureVector() const{
             return this->featureNames;
         }
 
+        std::string getFeatureName(int n) const{
+            return this->featureNames.at(n);
+        }
+
+        int getNumberOfFeatures() const {
+            return this->rowSize;
+        }
+        int getNumberOfValues() const {
+            return this->colSize;
+        }
 };

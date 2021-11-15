@@ -28,7 +28,6 @@ TimeSeries::TimeSeries(const char *file_name) {
             this->featureNames.push_back(column);
         }
     }
-    this->rowSize = featureNames.size();
     while (getline(myFile, line)) {
         stringstream strs(line);
         int index = 0;
@@ -40,7 +39,8 @@ TimeSeries::TimeSeries(const char *file_name) {
             index++;
         }
     }
-
+    this->rowSize = featureNames.size();
+    this->colSize = this->tableVectors.at(1).second.size();
     myFile.close();
 }
 
