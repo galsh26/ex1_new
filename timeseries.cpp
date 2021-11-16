@@ -1,5 +1,5 @@
 /*
- * timeseries.cpp
+ * TimeSeries.cpp
  *
  * Author: Gal Schlifstein, id: 209492925
  * Author: Amit Zakai, id: 318654167
@@ -15,7 +15,7 @@
 
 using namespace std;
 
-timeseries::timeseries(const char *file_name) {
+TimeSeries::TimeSeries(const char *file_name) {
     ifstream myFile(file_name);
     if(!myFile.is_open()) throw std::runtime_error("Error opening file");
     string line, column;
@@ -43,3 +43,4 @@ timeseries::timeseries(const char *file_name) {
     this->colSize = this->tableVectors.at(1).second.size();
     myFile.close();
 }
+

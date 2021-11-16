@@ -1,5 +1,5 @@
 /*
- * timeseries.h
+ * TimeSeries.h
  *
  * Author: Gal Schlifstein, id: 209492925
  * Author: Amit Zakai, id: 318654167
@@ -19,7 +19,7 @@
 #include <fstream>
 #include <sstream>
 
-class timeseries {
+class TimeSeries {
     private:
         std::vector<std::pair<std::string, std::vector<float>>> tableVectors;
         std::vector<std::string> featureNames;
@@ -27,7 +27,7 @@ class timeseries {
         int colSize;
 
     public:
-        timeseries(const char* file_name);
+        TimeSeries(const char* file_name);
 
         float get_feature_by_time(std::string typeName, float time) const;
 
