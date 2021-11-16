@@ -1,3 +1,13 @@
+/*
+ * anomaly_detection.h
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
+
+#ifndef ANOMALYDETECTION_H_
+#define ANOMALYDETECTION_H_
+
 // returns the mean of X
 float mean(const float* x, int size);
 // returns the variance of X and Y
@@ -26,3 +36,5 @@ Line linear_reg(Point** points, int size);
 float dev(Point p,Point** points, int size);
 // returns the deviation between point p and the line
 float dev(Point p,Line l);
+
+#endif /* ANOMALYDETECTION_H_ */

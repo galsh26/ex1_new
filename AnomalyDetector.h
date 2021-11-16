@@ -5,6 +5,9 @@
  * Author: Amit Zakai, id: 318654167
  */
 
+#ifndef ANOMALYDETECTOR_H_
+#define ANOMALYDETECTOR_H_
+
 #include "timeseries.h"
 
 //class TimeSeries{ /*...*/};
@@ -22,3 +25,5 @@ public:
     virtual std::vector<AnomalyReport> detect(const timeseries& ts)=0;
     virtual ~TimeSeriesAnomalyDetector(){}
 };
+
+#endif /* ANOMALYDETECTOR_H_ */

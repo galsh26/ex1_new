@@ -5,6 +5,9 @@
  * Author: Amit Zakai, id: 318654167
  */
 
+#ifndef TIMESERIES_H_
+#define TIMESERIES_H_
+
 #include <iostream>
 #include <iterator>
 #include <map>
@@ -55,3 +58,5 @@ class timeseries {
             return this->colSize;
         }
 };
+
+#endif /* TIMESERIES_H_ */

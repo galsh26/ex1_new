@@ -47,15 +47,19 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
     int fea_num = ts.getNumberOfFeatures();
     int val_num = ts.getNumberOfValues();
     for (int i = 0; i < fea_num; i++) {
-        int m = 0, c = -1, p;
+        float m = 0, c = -1, p;
         for (int j = i + 1; j < fea_num; j++) {
             // casting vectors to pointers array
             vector<float> temp1 = ts.getValuesByIndex(i);
             vector<float> temp2 = ts.getValuesByIndex(j);
             float* fea1 = &temp1[0];
             float* fea2 = &temp2[0];
-            // calculate corrlation
-            p = abs(pearson(fea1, fea2, val_num));
+            // calculate correlation
+            p = pearson(fea1, fea2, val_num);
+            // abs
+            if (p < 0) {
+                p = p * (-1);
+            }
             // if correlated switch
             if (p > m) {
                 m = p;
@@ -65,11 +69,11 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
             if (c != -1) {
                 cf.feature1 = ts.getFeatureName(i);
                 cf.feature2 = ts.getFeatureName(j);
-                cf.corrlation = p;
+                cf.correlation = p;
                 Point **pointsArray = getPointsArray(fea1, fea2, val_num);
                 cf.lin_reg = linear_reg(pointsArray, val_num);
                 cf.threshold = getThreshold(pointsArray, cf.lin_reg, val_num).first * 1.1;
-                // save in corrlation
+                // save in correlation
                 this->correlations.push_back(cf);
             }
         }

@@ -1,8 +1,3 @@
-#include <string>
-#include <vector>
-#include "anomaly_detection_util.h"
-#include "AnomalyDetector.h"
-
 /*
  * SimpleAnomalyDetector.h
  *
@@ -10,9 +5,17 @@
  * Author: Amit Zakai, id: 318654167
  */
 
+#ifndef SIMPLEANOMALYDETECTOR_H_
+#define SIMPLEANOMALYDETECTOR_H_
+
+#include <string>
+#include <vector>
+#include "anomaly_detection_util.h"
+#include "AnomalyDetector.h"
+
 struct correlatedFeatures{
     std::string feature1,feature2; // names of the correlated features
-    float corrlation;
+    float correlation;
     Line lin_reg;
     float threshold;
 };
@@ -24,5 +27,7 @@ public:
     virtual ~SimpleAnomalyDetector();
     virtual void learnNormal(const timeseries& ts);
     virtual std::vector<AnomalyReport> detect(const timeseries& ts);
-    std::vector<correlatedFeatures> getNormalModel();
+    virtual std::vector<correlatedFeatures> getNormalModel();
 };
+
+#endif /* SIMPLEANOMALYDETECTOR_H_ */
