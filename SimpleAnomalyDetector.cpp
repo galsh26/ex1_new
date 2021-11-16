@@ -66,7 +66,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 c = j;
             }
             // save in temp structure
-            if (c != -1) {
+            if (c != -1 && p > 0.9) {
                 cf.feature1 = ts.getFeatureName(i);
                 cf.feature2 = ts.getFeatureName(j);
                 cf.corrlation = p;

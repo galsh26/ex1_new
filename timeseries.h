@@ -33,7 +33,8 @@ class TimeSeries {
 
         std::vector<float> getValuesByName(std::string feature) const{
             for (int i = 0; i < this->rowSize; i++) {
-                if (this->featureNames.at(i).compare(feature)) {
+                std::string temp = this->featureNames.at(i);
+                if (temp == feature) {
                     return this->tableVectors.at(i).second;
                 }
             }
