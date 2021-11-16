@@ -43,6 +43,3 @@ timeseries::timeseries(const char *file_name) {
     this->colSize = this->tableVectors.at(1).second.size();
     myFile.close();
 }
-
-
-

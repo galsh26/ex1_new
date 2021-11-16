@@ -14,16 +14,14 @@ SimpleAnomalyDetector::SimpleAnomalyDetector() {}
 
 SimpleAnomalyDetector::~SimpleAnomalyDetector() noexcept {}
 
-std::vector<correlatedFeatures> SimpleAnomalyDetector::getNormalModel() {}
-
 Point** getPointsArray(const float* a,const float* b, int size) {
-    Point **p;
-    for (int i = 0; i < size; ++i) {
-        p[i]->x = a[i];
-        p[i]->y = b[i];
+    Point** p = new Point*[size];
+    for(int i = 0; i < size; i++) {
+        p[i] = new Point(a[i],b[i]);
     }
     return p;
 }
+
 // calculate threshold for line of features
 pair<float, int> getThreshold(Point** points, Line line, int size) {
     pair<float, int> pr;
@@ -50,7 +48,7 @@ void SimpleAnomalyDetector::learnNormal(const timeseries &ts) {
     int val_num = ts.getNumberOfValues();
     for (int i = 0; i < fea_num; i++) {
         int m = 0, c = -1, p;
-        for (int j = i + 1; i < fea_num; j++) {
+        for (int j = i + 1; j < fea_num; j++) {
             // casting vectors to pointers array
             vector<float> temp1 = ts.getValuesByIndex(i);
             vector<float> temp2 = ts.getValuesByIndex(j);
@@ -89,7 +87,7 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const timeseries &ts) {
         vector<float> temp2 = ts.getValuesByName(temp.feature2);
         float* arr1 = &temp1[0];
         float* arr2 = &temp2[0];
-        //temp.corrlation = abs(pearson(arr1, arr2, size));
+        // temp.corrlation = abs(pearson(arr1, arr2, size));
         Point **pointsArray = getPointsArray(arr1, arr2, size);
         temp.lin_reg = linear_reg(pointsArray, size);
         pair<float, int> pr = getThreshold(pointsArray, temp.lin_reg, size);
@@ -101,5 +99,9 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const timeseries &ts) {
         }
     }
     return anomaly_reports;
+}
+
+std::vector<correlatedFeatures> SimpleAnomalyDetector::getNormalModel() {
+    return this->correlations;
 }
 
