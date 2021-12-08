@@ -1,3 +1,3 @@
-/home/amitzakai/CLionProjects/advanced/ex2_new/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/amitzakai/CLionProjects/advanced/ex2_new/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/amitzakai/CLionProjects/advanced/ex2_new/cmake-build-debug/CMakeFiles/ex1.dir
+/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug/CMakeFiles/ex1.dir
