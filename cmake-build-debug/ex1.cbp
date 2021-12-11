@@ -100,6 +100,12 @@
 		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/anomaly_detection_util.h">
 			<Option target="ex1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/minCircle.cpp">
+			<Option target="ex1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/minCircle.h">
+			<Option target="ex1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/timeseries.cpp">
 			<Option target="ex1"/>
 		</Unit>
