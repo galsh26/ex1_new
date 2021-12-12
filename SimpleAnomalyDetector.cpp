@@ -41,9 +41,23 @@ pair<float, int> getThreshold(Point** points, Line line, int size) {
     return pr;
 }
 
+
+void SimpleAnomalyDetector::learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1,
+                                    std::string feature2, int val_num) {
+    if(p > 0.9) {
+        correlatedFeatures cf;
+        cf.feature1 = feature1;
+        cf.feature2 = feature2;
+        cf.corrlation = p;
+        cf.lin_reg = linear_reg(ps, val_num);
+        cf.threshold = getThreshold(ps, cf.lin_reg, val_num).first * 1.1;
+        // save in corrlation
+        this->correlations.push_back(cf);
+    }
+}
+
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
-    // temp structure for correlated features
-    correlatedFeatures cf;
+    // temp structure for correlated feature
     int fea_num = ts.getNumberOfFeatures();
     int val_num = ts.getNumberOfValues();
     for (int i = 0; i < fea_num; i++) {
@@ -65,19 +79,18 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 m = p;
                 c = j;
             }
-            // save in temp structure
-            if (c != -1 && p > 0.9) {
-                cf.feature1 = ts.getFeatureName(i);
-                cf.feature2 = ts.getFeatureName(j);
-                cf.corrlation = p;
-                Point **pointsArray = getPointsArray(fea1, fea2, val_num);
-                cf.lin_reg = linear_reg(pointsArray, val_num);
-                cf.threshold = getThreshold(pointsArray, cf.lin_reg, val_num).first * 1.1;
-                // save in corrlation
-                this->correlations.push_back(cf);
+            string f_name1 = ts.getFeatureName(i);
+            string f_name2 = ts.getFeatureName(j);
+            Point **pointsArray = getPointsArray(fea1, fea2, val_num);
+            if (c != -1) {
+                learnCF(ts, pointsArray,p, f_name1, f_name2,val_num);
             }
         }
     }
+}
+
+bool SimpleAnomalyDetector::isAnomaly(float fea1, float fea2, correlatedFeatures c) {
+    return (c.threshold < abs(fea2 - c.lin_reg.f(fea1)));
 }
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
@@ -85,14 +98,15 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     correlatedFeatures temp;
     int numOfCorr = this->correlations.size();
     for(int i = 0; i < numOfCorr; i++) {
-        temp.feature1 = this->correlations.at(i).feature1;
-        temp.feature2 = this->correlations.at(i).feature2;
-        int size = ts.getNumberOfValues();
+        //temp.feature1 = this->correlations.at(i).feature1;
+        //temp.feature2 = this->correlations.at(i).feature2;
+        temp = this->correlations.at(i);
+        //int size = ts.getNumberOfValues();
         vector<float> temp1 = ts.getValuesByName(temp.feature1);
         vector<float> temp2 = ts.getValuesByName(temp.feature2);
+        /*
         float* arr1 = &temp1[0];
         float* arr2 = &temp2[0];
-        // temp.corrlation = abs(pearson(arr1, arr2, size));
         Point **pointsArray = getPointsArray(arr1, arr2, size);
         temp.lin_reg = linear_reg(pointsArray, size);
         pair<float, int> pr = getThreshold(pointsArray, temp.lin_reg, size);
@@ -101,6 +115,13 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
             string des = temp.feature1 + '-' + temp.feature2;
             int row_ano = pr.second;
             anomaly_reports.push_back(AnomalyReport(des, row_ano));
+        }
+        */
+        for (int j = 0; j < temp1.size(); j++) {
+            if (isAnomaly(temp1[j], temp2[j], temp)){
+                string des = temp.feature1 + '-' + temp.feature2;
+                anomaly_reports.push_back(AnomalyReport(des, j+1));
+            }
         }
     }
     return anomaly_reports;

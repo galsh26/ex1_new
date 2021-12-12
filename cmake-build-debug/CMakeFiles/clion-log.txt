@@ -1,4 +1,4 @@
-C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug' && /home/galsh26/cmake-3.17.0-Linux-x86_64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' '/mnt/c/Projects/yearB/clion projects/ex1'; exitcode=$?; sleep 0.001; (exit $exitcode)"
+/opt/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/amitzakai/CLionProjects/advanced/ex3
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug
+-- Build files have been written to: /home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug
