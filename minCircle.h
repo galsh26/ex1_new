@@ -1,10 +1,9 @@
 /*
- * anomaly_detection_util.cpp
+ * minCircle.h
  *
  * Author: Gal Schlifstein, id: 209492925
  * Author: Amit Zakai, id: 318654167
  */
-
 
 #ifndef MINCIRCLE_H_
 #define MINCIRCLE_H_
@@ -19,6 +18,11 @@ using namespace std;
 
 
 // ------------ DO NOT CHANGE -----------
+//class Point{
+//public:
+//	float x,y;
+//	Point(float x,float y):x(x),y(y){}
+//};
 
 class Circle{
 public:
@@ -28,14 +32,18 @@ public:
 };
 // --------------------------------------
 
-float distance(const Point& a, const Point& b);
-bool is_inside(const Circle& c, const Point& p);
-Point get_circle_center(float bx, float by, float cx, float cy);
-Circle circle_from(const Point& A, const Point& B, const Point& C);
-Circle circle_from(const Point& A, const Point& B);
-bool is_valid_circle(const Circle& c, const vector<Point>& P);
-Circle minimum_enclosing_circle(const vector<Point>& P);
-Circle welzl(Point** P,vector<Point> R, size_t n);
-Circle findMinCircle(Point** points,size_t size);
+
+
+float distance(Point a, Point b);
+
+Circle from2points(Point a,Point b);
+
+Point circumcenter(Point b, Point c);
+
+Circle from3Points(Point a, Point b, Point c);
+
+Circle trivial(vector<Point>& P);
+
+Circle welzl(Point** P,vector<Point> R, size_t n);Circle findMinCircle(Point** points,size_t size);
 
 #endif /* MINCIRCLE_H_ */

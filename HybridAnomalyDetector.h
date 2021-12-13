@@ -1,4 +1,9 @@
-
+/*
+ * HybridAnomalyDetector.h
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
 #ifndef HYBRIDANOMALYDETECTOR_H_
 #define HYBRIDANOMALYDETECTOR_H_

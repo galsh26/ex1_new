@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3">
-				<Option output="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug"/>
+				<Option output="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3/fast">
-				<Option output="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug"/>
+				<Option output="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Projects/yearB/clion projects/ex1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,50 +75,50 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Projects/yearB/clion\ projects/ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/AnomalyDetector.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/AnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/HybridAnomalyDetector.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/HybridAnomalyDetector.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/HybridAnomalyDetector.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/HybridAnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/MainTrain.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/MainTrain.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/SimpleAnomalyDetector.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/SimpleAnomalyDetector.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/SimpleAnomalyDetector.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/SimpleAnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/anomaly_detection_util.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/anomaly_detection_util.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/anomaly_detection_util.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/anomaly_detection_util.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/minCircle.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/minCircle.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/minCircle.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/minCircle.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/timeseries.cpp">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/timeseries.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/timeseries.h">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/timeseries.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex3/CMakeLists.txt">
+		<Unit filename="/mnt/c/Projects/yearB/clion projects/ex1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

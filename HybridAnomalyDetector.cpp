@@ -1,5 +1,12 @@
+/*
+ * HybridAnomalyDetector.cpp
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
 #include "HybridAnomalyDetector.h"
+#include "minCircle.h"
 
 HybridAnomalyDetector::HybridAnomalyDetector() {
 
@@ -7,6 +14,7 @@ HybridAnomalyDetector::HybridAnomalyDetector() {
 
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
+
 }
 
 void HybridAnomalyDetector::learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1, std::string feature2,
