@@ -2,17 +2,14 @@
 #include "HybridAnomalyDetector.h"
 
 HybridAnomalyDetector::HybridAnomalyDetector() {
-	// TODO Auto-generated constructor stub
 
 }
 
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
-	// TODO Auto-generated destructor stub
 }
 
-void
-HybridAnomalyDetector::learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1, std::string feature2,
+void HybridAnomalyDetector::learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1, std::string feature2,
                                int val_num) {
     SimpleAnomalyDetector::learnCF(ts, ps, p, feature1, feature2, val_num);
     if (p > 0.5 && p < 0.9) {
