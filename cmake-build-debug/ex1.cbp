@@ -85,6 +85,12 @@
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/AnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/CLI.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/CLI.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/HybridAnomalyDetector.cpp">
 			<Option target="ex3"/>
 		</Unit>
@@ -104,6 +110,9 @@
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/anomaly_detection_util.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/commands.h">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/minCircle.cpp">

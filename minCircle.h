@@ -27,6 +27,7 @@ public:
 };
 // --------------------------------------
 
+
 float distance(const Point& a, const Point& b);
 bool is_inside(const Circle& c, const Point& p);
 Point get_circle_center(float bx, float by, float cx, float cy);
