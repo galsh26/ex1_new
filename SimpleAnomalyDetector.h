@@ -25,6 +25,7 @@ struct correlatedFeatures{
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 protected:
     std::vector<correlatedFeatures> correlations;
+    float threshold;
 
 public:
     SimpleAnomalyDetector();
@@ -33,10 +34,15 @@ public:
     virtual std::vector<AnomalyReport> detect(const TimeSeries& ts);
     virtual std::vector<correlatedFeatures> getNormalModel();
 
+    void setThreshold(float t){
+        this->threshold = t;
+    }
+
 protected:
     virtual void learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1,
                          std::string feature2, int val_num);
     virtual bool isAnomaly(float fea1, float fea2, correlatedFeatures c);
+
 };
 
 #endif /* SIMPLEANOMALYDETECTOR_H_ */

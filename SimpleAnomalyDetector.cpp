@@ -10,7 +10,9 @@
 
 using namespace std;
 
-SimpleAnomalyDetector::SimpleAnomalyDetector() {}
+SimpleAnomalyDetector::SimpleAnomalyDetector() {
+    this->threshold = 0.9;
+}
 
 SimpleAnomalyDetector::~SimpleAnomalyDetector() noexcept {}
 
@@ -44,7 +46,7 @@ pair<float, int> getThreshold(Point** points, Line line, int size) {
 
 void SimpleAnomalyDetector::learnCF(const TimeSeries &ts, Point **ps, float p, std::string feature1,
                                     std::string feature2, int val_num) {
-    if(p > 0.9) {
+    if(p > this->threshold) {
         correlatedFeatures cf;
         cf.feature1 = feature1;
         cf.feature2 = feature2;
