@@ -70,7 +70,7 @@ public:
         dio->getFile("test.csv");
         dio->write("Upload complete.\n");
     }
-    virtual string getDes(){
+    string getDes(){
         return this->description;
     }
 };
@@ -95,7 +95,7 @@ public:
             }
         }
     }
-    virtual string getDes(){
+    string getDes(){
         return this->description;
     }
 };
@@ -114,9 +114,35 @@ public:
         dio->write("anomaly detection complete.\n");
 
     }
-    virtual string getDes(){
+    string getDes(){
         return this->description;
     }
 };
+
+class DisplayResults: public Command{
+public:
+    DisplayResults(DefaultIO* dio): Command(dio, " display results"){}
+    virtual void execute(AllDetails* allDetails){
+        int size = allDetails->anomaly_report.size();
+        for (int i = 0; i < size; i++) {
+            dio->write(allDetails->anomaly_report.at(i).timeStep);
+            dio->write("\t ");
+            dio->write(allDetails->anomaly_report.at(i).description);
+            dio->write("\n");
+        }
+        dio->write("Done.\n");
+    }
+
+    string getDes(){
+        return this->description;
+    }
+};
+
+class Exit: public Command{
+public:
+    Exit(DefaultIO* dio): Command(dio, "exit"){}
+    virtual void execute(){};
+};
+
 
 #endif /* COMMANDS_H_ */
