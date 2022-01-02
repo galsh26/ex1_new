@@ -106,23 +106,25 @@ class AlgoSettings: public Command{
 public:
     AlgoSettings(DefaultIO* dio): Command(dio, "algorithm settings"){}
     virtual void execute(AllDetails* allDetails){
-        dio->write("The current correlation threshold is ");
-        dio->write(allDetails->threshold);
-        dio->write("\n");
-        dio->write("Please choose a new threshold\n");
-        // change threshold if client want
-        float t;
-        dio->read(&t);
-        int mask = 0;
-        while (!mask){
-            if (t < 0 || t > 1){
-                dio->write("please choose a value between 0 and 1.");
-            } else{
-                allDetails->threshold = t;
-                mask = 1;
+        bool mask = false;
+        while (!mask) {
+            dio->write("The current correlation threshold is ");
+            dio->write(allDetails->threshold);
+            dio->write("\n");
+            dio->write("Please choose a new threshold\n");
+            float thre;
+            dio->read(&thre);
+            if(thre <= 0 || thre >= 1){
+                dio->write("please choose a value between 0 and 1.\n");
+            }
+            else{
+                allDetails->threshold=thre;
+                mask = true;
             }
         }
     }
+    // get command description
+    
     string getDes(){
         return this->description;
     }

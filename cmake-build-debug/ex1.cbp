@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug"/>
+				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug"/>
+				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug"/>
+				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3">
-				<Option output="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug"/>
+				<Option output="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3/fast">
-				<Option output="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug"/>
+				<Option output="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,59 +75,59 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex44/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/amitzakai/CLionProjects/advanced/ex5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/AnomalyDetector.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/AnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/CLI.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/CLI.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/CLI.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/CLI.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/HybridAnomalyDetector.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/HybridAnomalyDetector.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/HybridAnomalyDetector.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/HybridAnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/MainTrain.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/MainTrain.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/SimpleAnomalyDetector.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/SimpleAnomalyDetector.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/SimpleAnomalyDetector.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/SimpleAnomalyDetector.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/anomaly_detection_util.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/anomaly_detection_util.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/anomaly_detection_util.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/anomaly_detection_util.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/commands.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/commands.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/minCircle.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/minCircle.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/minCircle.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/minCircle.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/timeseries.cpp">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/timeseries.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/timeseries.h">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/timeseries.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex44/CMakeLists.txt">
+		<Unit filename="/home/amitzakai/CLionProjects/advanced/ex5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
