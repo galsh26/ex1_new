@@ -1,14 +1,7 @@
 /*
- * MainTrain.cpp
- *
- *  Created on: 11 ????? 2020
- *      Author: Eli
- */
-
-/*
  * run2.cpp
  *
- *  Created on: 8 ????ª 2019
+ *  Created on: 8 ????? 2019
  *      Author: Eli
  */
 

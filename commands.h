@@ -1,7 +1,9 @@
-//
-// Created by amitzakai on 12/28/21.
-//
-
+/*
+ * commands.h
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
@@ -10,6 +12,7 @@
 #include <string.h>
 
 #include <fstream>
+#include <utility>
 #include <vector>
 #include "HybridAnomalyDetector.h"
 
@@ -26,11 +29,11 @@ public:
     // you may add additional methods here
 
     // function to read file
-    void getFile(string fileName){
+    void getFile(const string& fileName) {
         ofstream out(fileName);
-        string raw="";
+        string raw;
         // if "done" stop read
-        while ((raw=read()) != "done") {
+        while ((raw = read()) != "done") {
             out<<raw<<endl;
         }
         out.close();
@@ -74,10 +77,10 @@ protected:
     //const string description;
 public:
     const string description;
-    Command(DefaultIO* dio, const string description):dio(dio), description(description){}
+    Command(DefaultIO* dio, string  description):dio(dio), description(std::move(description)){}
     virtual void execute(AllDetails* allDetails)=0;
-    virtual string getDes()=0;
-    virtual ~Command(){}
+    virtual string getDes() = 0;
+    virtual ~Command()= default;
 };
 
 // implement here your command classes
@@ -85,8 +88,8 @@ public:
 
 class UploadCSVFile: public Command {
 public:
-    UploadCSVFile(DefaultIO* dio): Command(dio, "upload a time series csv file"){}
-    virtual void execute(AllDetails* allDetails) {
+    explicit UploadCSVFile(DefaultIO* dio): Command(dio, "upload a time series csv file"){}
+    void execute(AllDetails* allDetails) override {
         // get training file
         dio->write("Please upload your local train CSV file.\n");
         dio->getFile("train.csv");
@@ -96,7 +99,7 @@ public:
         dio->getFile("test.csv");
         dio->write("Upload complete.\n");
     }
-    string getDes(){
+    string getDes() override{
         return this->description;
     }
 };
@@ -104,8 +107,8 @@ public:
 
 class AlgoSettings: public Command{
 public:
-    AlgoSettings(DefaultIO* dio): Command(dio, "algorithm settings"){}
-    virtual void execute(AllDetails* allDetails){
+    explicit AlgoSettings(DefaultIO* dio): Command(dio, "algorithm settings"){}
+    void execute(AllDetails* allDetails) override{
         bool mask = false;
         while (!mask) {
             dio->write("The current correlation threshold is ");
@@ -114,26 +117,25 @@ public:
             dio->write("Please choose a new threshold\n");
             float thre;
             dio->read(&thre);
-            if(thre <= 0 || thre >= 1){
-                dio->write("please choose a value between 0 and 1.\n");
-            }
-            else{
-                allDetails->threshold=thre;
+            if(thre > 0 && thre <= 1){
+                allDetails->threshold = thre;
                 mask = true;
             }
+            else
+                dio->write("please choose a value between 0 and 1.\n");
         }
     }
     // get command description
 
-    string getDes(){
+    string getDes() override{
         return this->description;
     }
 };
 
 class DetectAnomaly: public Command{
 public:
-    DetectAnomaly(DefaultIO* dio): Command(dio, "detect anomalies"){}
-    virtual void execute(AllDetails* allDetails){
+    explicit DetectAnomaly(DefaultIO* dio): Command(dio, "detect anomalies"){}
+    void execute(AllDetails* allDetails) override{
         // detect anomalies by hybrid
         TimeSeries train("train.csv");
         TimeSeries test("test.csv");
@@ -165,15 +167,15 @@ public:
         dio->write("anomaly detection complete.\n");
 
     }
-    string getDes(){
+    string getDes() override{
         return this->description;
     }
 };
 
 class DisplayResults: public Command{
 public:
-    DisplayResults(DefaultIO* dio): Command(dio, "display results"){}
-    virtual void execute(AllDetails* allDetails){
+    explicit DisplayResults(DefaultIO* dio): Command(dio, "display results"){}
+    void execute(AllDetails* allDetails) override{
         int size = allDetails->anomaly_report.size();
         for (int i = 0; i < size; i++) {
             dio->write(allDetails->anomaly_report.at(i).timeStep);
@@ -184,18 +186,18 @@ public:
         dio->write("Done.\n");
     }
 
-    string getDes(){
+    string getDes() override{
         return this->description;
     }
 };
 
 class UploadAndAnalize: public Command{
 public:
-    UploadAndAnalize(DefaultIO* dio): Command(dio, "upload anomalies and analyze results"){}
+    explicit UploadAndAnalize(DefaultIO* dio): Command(dio, "upload anomalies and analyze results"){}
 
-    virtual void execute(AllDetails* allDetails) {
+    void execute(AllDetails* allDetails) override {
         dio->write("Please upload your local anomalies file.\n");
-        string raw ="";
+        string raw;
         int comma;
         float tp = 0, fp = 0, p = 0, sum = 0;
         while ((raw = dio->read()) != "done"){
@@ -235,31 +237,28 @@ public:
         // define false positive
         float f = fp / n;
         // print only 3 digits maximum
-        float N=allDetails->raws - sum;
-        float tpr=((int)(1000.0*tp/p))/1000.0f;
-        float fpr=((int)(1000.0*fp/N))/1000.0f;
+        float N = allDetails->raws - sum;
+        float tpr = ((int)(1000.0*tp/p))/1000.0f;
+        float fpr = ((int)(1000.0*fp/N))/1000.0f;
         dio->write("True Positive Rate: ");
         dio->write(tpr);
         dio->write("\nFalse Positive Rate: ");
         dio->write(fpr);
         dio->write("\n");
-
     }
 
-
-    string getDes(){
+    string getDes() override{
         return this->description;
     }
 };
 
 class Exit: public Command{
 public:
-    Exit(DefaultIO* dio): Command(dio, "exit"){}
-    virtual void execute(AllDetails* allDetails){};
-    string getDes(){
+    explicit Exit(DefaultIO* dio): Command(dio, "exit"){}
+    void execute(AllDetails* allDetails) override{};
+    string getDes() override {
         return this->description;
     }
 };
-
 
 #endif /* COMMANDS_H_ */

@@ -1,6 +1,9 @@
-//
-// Created by amitzakai on 12/28/21.
-//
+/*
+ * CLI.h
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
 #ifndef CLI_H_
 #define CLI_H_

@@ -1,6 +1,9 @@
-//
-// Created by amitzakai on 12/28/21.
-//
+/*
+ * CLI.cpp
+ *
+ * Author: Gal Schlifstein, id: 209492925
+ * Author: Amit Zakai, id: 318654167
+ */
 
 #include "CLI.h"
 
@@ -10,7 +13,6 @@ CLI::CLI(DefaultIO *dio) {
     this->allCommands.push_back(new AlgoSettings(dio));
     this->allCommands.push_back(new DetectAnomaly(dio));
     this->allCommands.push_back(new DisplayResults(dio));
-    // fix five
     this->allCommands.push_back(new UploadAndAnalize(dio));
     this->allCommands.push_back(new Exit(dio));
 }
@@ -22,7 +24,7 @@ void CLI::start() {
         dio->write("Welcome to the Anomaly Detection Server.\n");
         dio->write("Please choose an option:\n");
         for (int i = 0; i < allCommands.size(); i++) {
-            dio->write(i+1);
+            dio->write(i + 1);
             dio->write(".");
             dio->write(allCommands[i]->description);
             dio->write("\n");
