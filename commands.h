@@ -114,7 +114,7 @@ public:
             dio->write("The current correlation threshold is ");
             dio->write(allDetails->threshold);
             dio->write("\n");
-            dio->write("Please choose a new threshold\n");
+            dio->write("Type a new threshold\n");
             float thre;
             dio->read(&thre);
             if(thre > 0 && thre <= 1){
