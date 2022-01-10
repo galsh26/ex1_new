@@ -11,8 +11,10 @@
 #include<iostream>
 #include <string.h>
 
+#include "timeseries.h"
 #include <fstream>
 #include <vector>
+#include <netdb.h>
 #include "HybridAnomalyDetector.h"
 
 using namespace std;
@@ -42,7 +44,44 @@ public:
 
 // you may add here helper classes
 
+class SocketIO : public DefaultIO {
+    int clientSocket;
 
+public:
+    explicit SocketIO(int clientSocket) : clientSocket(clientSocket) {}
+    string read() override {
+        string res;
+
+        char buf = 0;
+        while (true) {
+            recv(clientSocket, &buf, sizeof(buf), 0);
+            if (buf == '\n') break;
+            res += buf;
+        }
+
+        return res;
+    };
+    void write(string text) override { send(clientSocket, text.data(), text.size(), 0); }
+    void write(float f) override {
+        std::ostringstream ss;
+        ss << f;
+        std::string s(ss.str());
+        send(clientSocket, s.data(), s.size(), 0);
+    }
+    void read(float *f) override {
+        // 1 for float, 1 for \n
+        static char buffer[2]{};
+
+        // For small packets that are sent close to each other, the kernel
+        // may sometimes combine packets in an unwanted manner. For example:
+        // 3\n, 5\n => 3, \n5\n
+        // So wait until 2 bytes are received :)
+        recv(clientSocket, buffer, sizeof(buffer), MSG_WAITALL);
+        std::istringstream ss(buffer);
+        ss >> *f;
+    }
+    ~SocketIO() override = default;
+};
 
 // struct to save anomalies by time step for option 5
 struct TSReports {
